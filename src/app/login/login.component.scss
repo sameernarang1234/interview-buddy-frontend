@@ -1,0 +1,51 @@
+@import '../../assets/scss/variables.scss';
+@import '../../assets/scss/mixins.scss';
+
+.login-container {
+    height: 100vh;
+    
+    .left-container {
+        .form-container {
+            margin-top: 20vh;
+        }
+        .btn-form {
+            background-color: $btnBlue;
+            border-color: $btnBlue;
+            width: 70%;
+            margin-top: 3vh;
+            margin-left: 10%;
+        }
+    }
+
+    .right-container {
+        height: 100vh;
+        background-color: $backgroundBlue;
+
+        img {
+            width: 15vw;
+            margin-top: 30vh;
+            margin-left: 25vw;
+        }
+        
+        h5 {
+            color: white;
+            font-family: serif;
+            text-align: center;
+            margin-left: 29vw;
+            margin-top: 2vh;
+            width: 6vw;
+        }
+
+        h1 {
+            width: 15vw;
+            color: white;
+            margin-left: 26vw;
+            margin-top: 2px;
+            font-weight: lighter;
+
+            span {
+                color: cyan;
+            }
+        }
+    }
+}

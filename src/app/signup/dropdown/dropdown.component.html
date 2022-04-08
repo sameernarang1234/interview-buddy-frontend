@@ -1,0 +1,14 @@
+<div class="dropdown-parent">
+    <div class="dropdown-selected" (click)="openDropdown()">
+        <div class="ball">
+    
+        </div>
+        <div class="text">
+            <p class="para">{{selected}}</p>
+        </div>
+    </div>
+    
+    <div class="dropdown" *ngIf="drodownOpen">
+        <p *ngFor="let d of data" (click)="selectFromDropdown(d)">{{d}}</p>
+    </div>
+</div>

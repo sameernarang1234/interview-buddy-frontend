@@ -1,0 +1,36 @@
+<div class="row">
+    <div class="container col-5 mx-auto">
+        <h1 class="mt-5">Sign Up</h1>
+        <p>Create account to start using Interview Buddy</p>
+        <hr>
+        <app-user-card [username]="userData.username"></app-user-card>
+    </div>
+    <div class="container col-5 mx-auto">
+        <div class="form-container">
+            <form class="signup-form">
+                <div class="mb-3">
+                    <label for="username" class="form-label">Username</label>
+                    <input type="text" class="form-control" id="username" name="username" [(ngModel)]="userData.username">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="email" name="email" [(ngModel)]="userData.email">
+                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password" name="password" [(ngModel)]="userData.password">
+                </div>
+                <div class="container row">
+                    <div class="container col-6">
+                        <app-dropdown [data]="roles" (selection)="selectRole($event)"></app-dropdown>
+                    </div>
+                    <div class="container col-6">
+                        <app-dropdown [data]="specializations" (selection)="selectSpecialization($event)"></app-dropdown>
+                    </div>
+                </div>
+                <button class="btn btn-primary btn-create" (click)="signupUser()">CREATE</button>
+            </form>
+        </div>
+    </div>
+</div>

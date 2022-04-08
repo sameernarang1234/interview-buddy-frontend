@@ -1,0 +1,31 @@
+@import "../../../assets/scss/variables";
+@import "../../../assets/scss/mixins";
+
+$cardWidth: 25rem;
+$cardHeight: 35rem;
+
+.card-container {
+    background-color: $cardBackground;
+    width: $cardWidth;
+    height: $cardHeight;
+    margin-left: 10rem;
+    border-radius: 10px;
+    @include flex-center-col();
+
+    .profile-container {
+        background-color: $profileBG;
+        width: $cardWidth / 2;
+        height: $cardWidth / 2;
+        border-radius: 50%;
+        margin-top: 10vh;
+
+        @include flex-center-col();
+    }
+
+    .rating-strip {
+        background-color: $ratingBG;
+        height: $cardHeight / 14;
+        width: $cardWidth + 1.5;
+        margin-top: 20vh;
+    }
+}

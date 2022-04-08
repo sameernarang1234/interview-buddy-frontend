@@ -1,0 +1,13 @@
+@import "../../assets/scss/variables.scss";
+
+.form-container {
+    margin-top: 20vh;
+    width: 80%;
+
+    button {
+        background-color: $btnBlue;
+        width: 16rem;
+        margin-top: 4vh;
+        margin-left: 10rem;
+    }
+}

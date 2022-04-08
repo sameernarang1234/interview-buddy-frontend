@@ -1,0 +1,59 @@
+@import "../../../assets/scss/variables.scss";
+@import "../../../assets/scss/mixins.scss";
+
+.dropdown-parent {
+    position: relative;
+
+    .dropdown-selected {
+        cursor: pointer;
+        border: 1px solid lightgray;
+        border-radius: 5px;
+        height: 40px;
+        @include flex-row();
+    
+        .ball {
+            background-color: green;
+            height: 15px;
+            width: 15px;
+            margin-top: 10px!important;
+            margin-left: 10px;
+            border-radius: 50%;
+        }
+    
+        .text {
+            position: relative;
+            @include flex-row();
+            .para {
+                margin-top: 5px;
+                margin-left: 10px;
+                color: grey;
+                padding: 0;
+                font-size: 15px;
+            }
+        }
+    }
+    
+    .dropdown {
+        z-index: 10;
+        position: absolute;
+        background-color: white;
+        border: 1px solid lightgray;
+        border-radius: 5px;
+        width: 13vw;
+
+        p {
+            padding-left: 10px;
+            color: grey;
+            cursor: pointer;
+            height: 25px;
+            padding-top: 0px!important;
+            padding-bottom: 0px!important;
+            margin-top: 10px!important;
+            margin-bottom: 10px!important;
+        }
+
+        p:hover {
+            background-color: lightgray;
+        }
+    }
+}
