@@ -26,12 +26,27 @@
         </div>
         <hr>
         <div class="add-skill-container">
-            <h5>SOME SKILL</h5>
-            <button class="btn btn-primary">+ ADD SKILL</button>
+            <h5 *ngFor="let s of skills">{{s.name}}</h5>
+            <input placeholder="SOME SKILL" name="skill" (click)="isNewSkillBeingEdited()">
+            <button class="btn btn-primary" (click)="addSkillToTemplate()">+ ADD SKILL</button>
         </div>
         <div class="rating-container">
-            <div class="col-3" *ngFor="let s of skills">
-                <app-skill [skillName]="s.name"></app-skill>
+            <div class="row" *ngIf="isNewSkillEditing">
+                <div class="col-2">
+                    <app-skill [skillName]="newSkill.rating.hoisting"></app-skill>
+                </div>
+                <div class="col-2">
+                    <app-skill [skillName]="newSkill.rating.closure"></app-skill>
+                </div>
+                <div class="col-2">
+                    <app-skill [skillName]="newSkill.rating.scope"></app-skill>
+                </div>
+                <div class="col-2">
+                    <app-skill [skillName]="newSkill.rating.inheritance"></app-skill>
+                </div>
+                <div class="col-2">
+                    <app-skill [skillName]="newSkill.rating.promise"></app-skill>
+                </div>
             </div>
         </div>
     </div>

@@ -18,13 +18,13 @@ $skillRatingBG: rgb(6, 14, 53);
     @include flex-row();
 
     button {
-        height: 4vh!important;
+        height: 2.5rem!important;
         width: 10rem;
         margin-left: 2vw;
     }
 
     .btn-1 {
-        margin-left: 37vw!important;
+        margin-left: 28rem!important;
         background-color: $saveBtnBG;
     }
 
@@ -56,9 +56,18 @@ hr {
     @include flex-row();
     align-items: center;
     background-color: $addSkillBG;
-    height: 6vh;
+    height: 3.5rem;
     width: 79vw;
     border-radius: 10px;
+
+    input {
+        background-color: white;
+        color: black;
+        border: none;
+        border-radius: 5px;
+        height: 70%;
+        margin-left: 2vw;
+    }
 
     h5 {
         color: cyan;
@@ -74,7 +83,7 @@ hr {
 
 .rating-container {
     width: 79vw;
-    height: 60vh;
+    height: 55vh;
     background-color: $skillRatingBG;
     margin-top: 2vh;
     border-radius: 10px;

@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { RatingSchema } from '../template-editor/template-editor.component';
 
 @Component({
   selector: 'app-skill',
@@ -7,7 +8,10 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 })
 export class SkillComponent implements OnInit {
 
-  @Input() skillName: string = "";
+  @Input() skillName: RatingSchema = {
+    name: "",
+    value: "0"
+  };
   @Output() rating: EventEmitter<string> = new EventEmitter<string>();
 
   constructor() { }
