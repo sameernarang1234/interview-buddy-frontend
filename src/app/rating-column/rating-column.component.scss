@@ -1,0 +1,39 @@
+@import "../../assets/scss/variables.scss";
+@import "../../assets/scss/mixins.scss";
+
+$rating1BG: rgb(26, 139, 8);
+$rating2BG: rgb(105, 210, 88);
+$rating3BG: rgb(235, 205, 49);
+$rating4BG: rgb(235, 116, 49);
+$rating5BG: rgb(235, 49, 49);
+
+.rating-container {
+    @include flex-row();
+
+    div {
+        width: 35px;
+        height: 35px;
+        color: white;
+        text-align: center;
+    }
+
+    .rating-1 {
+        background-color: $rating1BG;
+    }
+
+    .rating-2 {
+        background-color: $rating2BG;
+    }
+
+    .rating-3 {
+        background-color: $rating3BG;
+    }
+
+    .rating-4 {
+        background-color: $rating4BG;
+    }
+
+    .rating-5 {
+        background-color: $rating5BG;
+    }
+}

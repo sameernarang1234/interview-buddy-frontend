@@ -1,0 +1,38 @@
+<div class="row">
+    <div class="col-2">
+        <app-side-bar [links]="links"></app-side-bar>
+    </div>
+    <div class="col-10">
+        <h4 class="username-header">{{username}}</h4>
+        <div class="template-header">
+            <h3>TEMPLATE EDITOR</h3>
+            <button class="btn btn-success btn-1">SAVE</button>
+            <button class="btn btn-primary btn-2">PREVIEW</button>
+            <button class="btn btn-danger btn-3">PUBLISH</button>
+        </div>
+        <div class="form-container">
+            <div class="formdata-container">
+                <label for="template-name" class="form-label">Template Name</label>
+                <input type="text" class="form-control" id="template-name" name="templateName">
+            </div>
+            <div class="formdata-container">
+                <label class="form-label">Position</label>
+                <app-dropdown [data]="positions"></app-dropdown>
+            </div>
+            <div class="formdata-container">
+                <label class="form-label">Department</label>
+                <app-dropdown [data]="departments"></app-dropdown>
+            </div>
+        </div>
+        <hr>
+        <div class="add-skill-container">
+            <h5>SOME SKILL</h5>
+            <button class="btn btn-primary">+ ADD SKILL</button>
+        </div>
+        <div class="rating-container">
+            <div class="col-3" *ngFor="let s of skills">
+                <app-skill [skillName]="s.name"></app-skill>
+            </div>
+        </div>
+    </div>
+</div>

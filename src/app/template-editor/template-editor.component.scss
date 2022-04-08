@@ -1,0 +1,81 @@
+@import "../../assets/scss/variables.scss";
+@import "../../assets/scss/mixins.scss";
+
+$saveBtnBG: rgb(14, 180, 61);
+$previewBtnBG: rgb(49, 23, 205);
+$publishBtnBG: rgb(125, 23, 205);
+$addSkillBG: rgb(5, 3, 135);
+$skillRatingBG: rgb(6, 14, 53);
+
+.username-header {
+    text-align: end;
+    margin-right: 5vw;
+    margin-top: 2vh;
+}
+
+.template-header {
+    margin-top: 3vh;
+    @include flex-row();
+
+    button {
+        height: 4vh!important;
+        width: 10rem;
+        margin-left: 2vw;
+    }
+
+    .btn-1 {
+        margin-left: 37vw!important;
+        background-color: $saveBtnBG;
+    }
+
+    .btn-2 {
+        background-color: $previewBtnBG;
+    }
+
+    .btn-3 {
+        background-color: $publishBtnBG;
+    }
+}
+
+.form-container {
+
+    @include flex-row();
+    margin-top: 2vh;
+
+    .formdata-container {
+        width: 17vw;
+        margin-right: 5vw;
+    }
+}
+
+hr {
+    width: 79vw;
+}
+
+.add-skill-container {
+    @include flex-row();
+    align-items: center;
+    background-color: $addSkillBG;
+    height: 6vh;
+    width: 79vw;
+    border-radius: 10px;
+
+    h5 {
+        color: cyan;
+        margin-left: 2vw;
+    }
+
+    button {
+        background-color: $addSkillBG;
+        border: 1px solid white;
+        margin-left: 2vw;
+    }
+}
+
+.rating-container {
+    width: 79vw;
+    height: 60vh;
+    background-color: $skillRatingBG;
+    margin-top: 2vh;
+    border-radius: 10px;
+}

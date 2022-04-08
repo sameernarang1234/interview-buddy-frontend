@@ -10,6 +10,12 @@ import { DropdownComponent } from './signup/dropdown/dropdown.component';
 import { FormsModule } from '@angular/forms';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { SideBarComponent } from './side-bar/side-bar.component';
+import { CreateTemplateComponent } from './create-template/create-template.component';
+import { AddUserCardComponent } from './add-user-card/add-user-card.component';
+import { BlankCardComponent } from './blank-card/blank-card.component';
+import { TemplateEditorComponent } from './template-editor/template-editor.component';
+import { RatingColumnComponent } from './rating-column/rating-column.component';
+import { SkillComponent } from './skill/skill.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +25,13 @@ import { SideBarComponent } from './side-bar/side-bar.component';
     UserCardComponent,
     DropdownComponent,
     DashboardComponent,
-    SideBarComponent
+    SideBarComponent,
+    CreateTemplateComponent,
+    AddUserCardComponent,
+    BlankCardComponent,
+    TemplateEditorComponent,
+    RatingColumnComponent,
+    SkillComponent
   ],
   imports: [
     BrowserModule,

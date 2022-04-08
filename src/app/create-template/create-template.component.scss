@@ -1,0 +1,26 @@
+@import "../../assets/scss/variables.scss";
+@import "../../assets/scss/mixins.scss";
+
+$createTemplateBG: rgb(49, 23, 205);
+
+.create-template-container {
+    background-color: $createTemplateBG;
+    width: 70%;
+    height: 25vh;
+    margin-top: 3vh;
+    border-radius: 25px;
+    padding-top: 3vh;
+    position: relative;
+    cursor: pointer;
+
+    h1 {
+        color: white;
+    }
+
+    img {
+        width: 7vw;
+        position: absolute;
+        right: 25px;
+        bottom: 25px;
+    }
+}

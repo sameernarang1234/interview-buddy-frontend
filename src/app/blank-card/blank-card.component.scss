@@ -1,0 +1,19 @@
+@import "../../assets/scss/variables.scss";
+@import "../../assets/scss/mixins.scss";
+
+$blankCardBG: rgb(221, 221, 221);
+
+.blankcard-container {
+    width: 70%;
+    height: 25vh;
+    background-color: $blankCardBG;
+    border-radius: 25px;
+    cursor: pointer;
+    @include flex-center-col();
+
+    h1 {
+        color: white;
+        font-size: 200px;
+        margin-top: -4vh;
+    }
+}

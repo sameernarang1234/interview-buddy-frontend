@@ -13,10 +13,14 @@ export class DashboardComponent implements OnInit {
     "Templates",
     "Users"
   ];
+  blankCards: boolean[] = [];
 
   constructor() { }
 
   ngOnInit(): void {
+    for (let i = 0; i < 4; i++) {
+      this.blankCards.push(true);
+    }
   }
 
 }
