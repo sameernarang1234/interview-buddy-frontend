@@ -12,7 +12,7 @@ export class SkillComponent implements OnInit {
     name: "",
     value: "0"
   };
-  @Output() rating: EventEmitter<string> = new EventEmitter<string>();
+  @Output() rating: EventEmitter<RatingSchema> = new EventEmitter<RatingSchema>();
 
   constructor() { }
 
@@ -20,7 +20,10 @@ export class SkillComponent implements OnInit {
   }
 
   getRating(rating: string) {
-    this.rating.emit(rating);
+    this.rating.emit({
+      name: this.skillName.name,
+      value: rating
+    });
   }
 
 }

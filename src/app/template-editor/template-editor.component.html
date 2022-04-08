@@ -8,44 +8,44 @@
             <h3>TEMPLATE EDITOR</h3>
             <button class="btn btn-success btn-1">SAVE</button>
             <button class="btn btn-primary btn-2">PREVIEW</button>
-            <button class="btn btn-danger btn-3">PUBLISH</button>
+            <button class="btn btn-danger btn-3" (click)="saveTemplate()">PUBLISH</button>
         </div>
         <div class="form-container">
             <div class="formdata-container">
                 <label for="template-name" class="form-label">Template Name</label>
-                <input type="text" class="form-control" id="template-name" name="templateName">
+                <input type="text" class="form-control" id="template-name" name="templateName" [(ngModel)]="template.name">
             </div>
             <div class="formdata-container">
                 <label class="form-label">Position</label>
-                <app-dropdown [data]="positions"></app-dropdown>
+                <app-dropdown [data]="positions" (selection)="setPosition($event)"></app-dropdown>
             </div>
             <div class="formdata-container">
                 <label class="form-label">Department</label>
-                <app-dropdown [data]="departments"></app-dropdown>
+                <app-dropdown [data]="departments" (selection)="setDepartment($event)"></app-dropdown>
             </div>
         </div>
         <hr>
         <div class="add-skill-container">
-            <h5 *ngFor="let s of skills">{{s.name}}</h5>
-            <input placeholder="SOME SKILL" name="skill" (click)="isNewSkillBeingEdited()">
+            <h5 *ngFor="let s of template.skills">{{s.name}}</h5>
+            <input placeholder="SOME SKILL" (click)="isNewSkillBeingEdited()" [(ngModel)]="newSkill.name">
             <button class="btn btn-primary" (click)="addSkillToTemplate()">+ ADD SKILL</button>
         </div>
         <div class="rating-container">
             <div class="row" *ngIf="isNewSkillEditing">
                 <div class="col-2">
-                    <app-skill [skillName]="newSkill.rating.hoisting"></app-skill>
+                    <app-skill [skillName]="newSkill.rating.hoisting" (rating)="editRating($event)"></app-skill>
                 </div>
                 <div class="col-2">
-                    <app-skill [skillName]="newSkill.rating.closure"></app-skill>
+                    <app-skill [skillName]="newSkill.rating.closure" (rating)="editRating($event)"></app-skill>
                 </div>
                 <div class="col-2">
-                    <app-skill [skillName]="newSkill.rating.scope"></app-skill>
+                    <app-skill [skillName]="newSkill.rating.scope" (rating)="editRating($event)"></app-skill>
                 </div>
                 <div class="col-2">
-                    <app-skill [skillName]="newSkill.rating.inheritance"></app-skill>
+                    <app-skill [skillName]="newSkill.rating.inheritance" (rating)="editRating($event)"></app-skill>
                 </div>
                 <div class="col-2">
-                    <app-skill [skillName]="newSkill.rating.promise"></app-skill>
+                    <app-skill [skillName]="newSkill.rating.promise" (rating)="editRating($event)"></app-skill>
                 </div>
             </div>
         </div>

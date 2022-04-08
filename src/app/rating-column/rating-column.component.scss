@@ -7,6 +7,11 @@ $rating3BG: rgb(235, 205, 49);
 $rating4BG: rgb(235, 116, 49);
 $rating5BG: rgb(235, 49, 49);
 
+.not-selected {
+    background-color: gray!important;
+    border: 1px solid black;
+}
+
 .rating-container {
     @include flex-row();
 
@@ -15,6 +20,7 @@ $rating5BG: rgb(235, 49, 49);
         height: 35px;
         color: white;
         text-align: center;
+        cursor: pointer;
     }
 
     .rating-1 {

@@ -9,12 +9,15 @@ export class RatingColumnComponent implements OnInit {
 
   @Output() rating: EventEmitter<string> = new EventEmitter<string>();
 
+  selectedRating: string = "";
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
   returnRating(rating: string) {
+    this.selectedRating = rating;
     this.rating.emit(rating);
   }
 

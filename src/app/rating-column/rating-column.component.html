@@ -1,17 +1,17 @@
 <div class="rating-container">
-    <div class="rating-1" (click)="returnRating('1')">
+    <div class="rating-1" (click)="returnRating('1')" [ngClass]="{'not-selected': selectedRating !== '1' && selectedRating !== ''}">
         A
     </div>
-    <div class="rating-2" (click)="returnRating('2')">
+    <div class="rating-2" (click)="returnRating('2')" [ngClass]="{'not-selected': selectedRating !== '2' && selectedRating !== ''}">
         B
     </div>
-    <div class="rating-3" (click)="returnRating('3')">
+    <div class="rating-3" (click)="returnRating('3')" [ngClass]="{'not-selected': selectedRating !== '3' && selectedRating !== ''}">
         C
     </div>
-    <div class="rating-4" (click)="returnRating('4')">
+    <div class="rating-4" (click)="returnRating('4')" [ngClass]="{'not-selected': selectedRating !== '4' && selectedRating !== ''}">
         D
     </div>
-    <div class="rating-5" (click)="returnRating('5')">
+    <div class="rating-5" (click)="returnRating('5')" [ngClass]="{'not-selected': selectedRating !== '5' && selectedRating !== ''}">
         E
     </div>
 </div>
